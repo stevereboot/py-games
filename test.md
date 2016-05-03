@@ -147,3 +147,8 @@ Output is printed using python's native string formatting.  Reference [here](htt
 	print 'Player: {:<10} FGM-FGA: {}-{:<10} FG%: {:.2%}'.format(
 		player, shots_fg_made, shots_fg_att, shots_fg_perc)
 ```
+
+### Extending this Project
+- Calculate more stats, like 3 pointers
+- Use more fields for comparison, such as `SHOT_ZONE_BASIC`, `SHOT_ZONE_AREA` and `SHOT_DISTANCE` (ie., who is has better mid-range jumper, left or right side, etc)
+- Download data on more players by modifying this [link](http://stats.nba.com/stats/shotchartdetail?PlayerID=201939&Season=2015-16&ContextMeasure=FGA&DateFrom=&DateTo=&GameID=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&Position=&RookieYear=&SeasonSegment=&SeasonType=Regular+Season&TeamID=0&VsConference=&VsDivision=).
