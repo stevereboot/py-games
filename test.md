@@ -34,10 +34,12 @@ players = ['kobe', 'lebron', 'steph']
 
 #### Player Shot Data JSON
 The player data has 2 major sections:
+
 1. Parameters: non-shot player data
 2. resultSets: shot data
 
 The shot data inside resultSets has 2 items:
+
 1. headers: the names of fields in the corresponding data array
 2. rowSet: an array of arrays containing shot data
 
