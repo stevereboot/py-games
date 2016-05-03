@@ -14,7 +14,7 @@ steph.json | Shot data for Steph's 2015-16 season
 None
 
 ### Code Walkthrough
-The main steps are
+
 
 #### Imports
 Only Python's native json library is required to parse the player data
@@ -29,5 +29,64 @@ we will iterate through next
 
 ``` python
 players = ['kobe', 'lebron', 'steph']
+
+```
+
+#### Loop Through Player Data Files
+Inside the loop, we open the the player's json file and parse it into a
+dictionary named `player_data`.  The file structure looks something like this:
+
+``` json
+{
+  "resource": "shotchartdetail",
+  "parameters": {
+    "LeagueID": "00",
+    "Season": "2015-16",
+    "SeasonType": "Regular Season"
+    ...
+  },
+  "resultSets": [
+    {
+      "name": "Shot_Chart_Detail",
+      "headers": [
+        "GRID_TYPE",
+        "GAME_ID",
+        "GAME_EVENT_ID",
+        "PLAYER_ID",
+        "PLAYER_NAME",
+        ...
+      ],
+      "rowSet": [
+        [
+          "Shot Chart Detail",
+          "0021500003",
+          6,
+          201939,
+          "Stephen Curry",
+          ...
+        ],
+        ...
+```
+
+
+
+
+
+``` python
+for player in players:
+	# Open file
+	file = open(player + '.json')
+
+	# Parse json data into dictionary
+	player_data = json.load(file)
+
+	# Extract shot data
+	shot_data = player_data['resultSets'][0]
+
+	# Data headers
+	headers = shot_data['headers']
+
+	# Shot data
+	shots = shot_data['rowSet']
 
 ```
