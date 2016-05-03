@@ -36,14 +36,14 @@ players = ['kobe', 'lebron', 'steph']
 Inside the loop, we open the the player's json file and parse it into a
 dictionary named `player_data`.  The file structure looks something like this:
 
-``` json
+```
 {
   "resource": "shotchartdetail",
   "parameters": {
     "LeagueID": "00",
     "Season": "2015-16",
     "SeasonType": "Regular Season"
-    // ITEMS REMOVED
+    ...
   },
   "resultSets": [
     {
@@ -54,7 +54,7 @@ dictionary named `player_data`.  The file structure looks something like this:
         "GAME_EVENT_ID",
         "PLAYER_ID",
         "PLAYER_NAME",
-        // ...
+        ...
       ],
       "rowSet": [
         [
@@ -63,9 +63,9 @@ dictionary named `player_data`.  The file structure looks something like this:
           6,
           201939,
           "Stephen Curry",
-          // ...
+          ...
         ],
-        // ...
+        ...
 ```
 
 
