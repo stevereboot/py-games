@@ -140,7 +140,7 @@ float division to calculate the percentage with precision:
 ```
 
 #### Ouput
-Output is printed using python's native string formatting.  Reference (here)[https://docs.python.org/2/library/stdtypes.html#str.format].
+Output is printed using python's native string formatting.  Reference [here](https://docs.python.org/2/library/stdtypes.html#str.format).
 
 ``` python
 	# Print ouput
