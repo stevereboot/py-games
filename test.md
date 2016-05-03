@@ -36,7 +36,7 @@ players = ['kobe', 'lebron', 'steph']
 Inside the loop, we open the the player's json file and parse it into a
 dictionary named `player_data`.  The file structure looks something like this:
 
-```
+``` python
 {
   "resource": "shotchartdetail",
   "parameters": {
