@@ -66,6 +66,9 @@ dictionary named `player_data`.  The file structure looks something like this:
           ...
         ],
         ...
+      ]
+    }
+}
 ```
 
 
