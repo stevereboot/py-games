@@ -13,8 +13,19 @@ steph.json | Shot data for Steph's 2015-16 season
 ### External Libraries Required
 None
 
-### Code Walkthrough
+### Key Concepts Used
+- Imports
+- Variables
+- Loops
+- Opening Files
+- JSON files and parsing
+- Dictionary
+- List
+- Integer Division
+- Operator +=
+- String Formatting
 
+### Code Walkthrough
 
 #### Imports
 Only Python's native json library is required to parse the player data
@@ -108,7 +119,7 @@ statistics for the player.  The `SHOT_TYPE` field is used to distinuguish
 field goals from 3 pointers.  We increment all attempts and only shots
 that were made by using the `SHOT_MADE_FLAG` field.
 
-Finally, the field goal percentage is calculated.  Note we want 
+Finally, the field goal percentage is calculated.  We use 
 float division to calculate the percentage with precision: 
 `shots_fg_perc = 1.0 * shots_fg_made / shots_fg_att`
 
@@ -129,7 +140,7 @@ float division to calculate the percentage with precision:
 ```
 
 #### Ouput
-Output is printed using python's native string formatting.
+Output is printed using python's native string formatting.  Reference (here)[https://docs.python.org/2/library/stdtypes.html#str.format].
 
 ``` python
 	# Print ouput
