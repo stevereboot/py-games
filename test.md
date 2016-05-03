@@ -104,10 +104,11 @@ for player in players:
 Continuing inside the loop, we create a new loop to aggregate field goal
 statistics for the player.  The `SHOT_TYPE` field is used to distinuguish
 field goals from 3 pointers.  We increment all attempts and only shots
-that were made by using the `SHOT_MADE_FLAG` field.  Finally, the
-field goal percentage is calculated.  Note we want float division to
-calculate the percentage to precision: `shots_fg_perc = 1.0 * shots_fg_made 
-/ shots_fg_att`
+that were made by using the `SHOT_MADE_FLAG` field.
+
+Finally, the field goal percentage is calculated.  Note we want 
+float division to calculate the percentage with precision: 
+`shots_fg_perc = 1.0 * shots_fg_made / shots_fg_att`
 
 ``` python
 	for shot in shots:
@@ -123,4 +124,13 @@ calculate the percentage to precision: `shots_fg_perc = 1.0 * shots_fg_made
 
 		# Calculate percentage made
 		shots_fg_perc = 1.0 * shots_fg_made / shots_fg_att
+```
+
+#### Ouput
+Output is printed using python's native string formatting.
+
+``` python
+	# Print ouput
+	print 'Player: {:<10} FGM-FGA: {}-{:<10} FG%: {:.2%}'.format(
+		player, shots_fg_made, shots_fg_att, shots_fg_perc)
 ```
