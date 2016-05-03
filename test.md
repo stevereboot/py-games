@@ -106,9 +106,8 @@ statistics for the player.  The `SHOT_TYPE` field is used to distinuguish
 field goals from 3 pointers.  We increment all attempts and only shots
 that were made by using the `SHOT_MADE_FLAG` field.  Finally, the
 field goal percentage is calculated.  Note we want float division to
-calculate the percentage to precision: 
-
-`shots_fg_perc = 1.0 * shots_fg_made / shots_fg_att`
+calculate the percentage to precision: `shots_fg_perc = 1.0 * shots_fg_made 
+/ shots_fg_att`
 
 ``` python
 	for shot in shots:
