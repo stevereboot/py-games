@@ -43,7 +43,7 @@ dictionary named `player_data`.  The file structure looks something like this:
     "LeagueID": "00",
     "Season": "2015-16",
     "SeasonType": "Regular Season"
-    // ...
+    // ITEMS REMOVED
   },
   "resultSets": [
     {
