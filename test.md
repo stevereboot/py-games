@@ -1,5 +1,8 @@
-# NBA Shot Data Project
-## For Day 3 of Bloomberg Coding Workshop 2016
+# Bloomberg Coding Workshop 2016
+## NBA Shot Data Project
+Comparing NBA shot data for Kobe, Lebron and Steph from the 2015-2016 season
+
+Data from http://stats.nba.com/
 
 ### Files
 
@@ -151,4 +154,4 @@ Output is printed using python's native string formatting.  Reference [here](htt
 ### Extending this Project
 - Calculate more stats, like 3 pointers
 - Use more fields for comparison, such as `SHOT_ZONE_BASIC`, `SHOT_ZONE_AREA` and `SHOT_DISTANCE` (ie., who is has better mid-range jumper, left or right side, etc)
-- Download data on more players by modifying this [link](http://stats.nba.com/stats/shotchartdetail?PlayerID=201939&Season=2015-16&ContextMeasure=FGA&DateFrom=&DateTo=&GameID=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&Position=&RookieYear=&SeasonSegment=&SeasonType=Regular+Season&TeamID=0&VsConference=&VsDivision=).
+- Download data on more players by modifying this [link](http://stats.nba.com/stats/shotchartdetail?PlayerID=201939&Season=2015-16&ContextMeasure=FGA&DateFrom=&DateTo=&GameID=&GameSegment=&LastNGames=0&LeagueID=00&Location=&Month=0&OpponentTeamID=0&Outcome=&Period=0&Position=&RookieYear=&SeasonSegment=&SeasonType=Regular+Season&TeamID=0&VsConference=&VsDivision=)
