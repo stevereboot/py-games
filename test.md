@@ -5,8 +5,7 @@ Feel free to contribute projects for any day.  Keep in mind the difficulty level
 
 | | Hello | High-Low | Hot-Cold | Calculator
 --- | --- | --- | --- | ---
-Project | 
-Day | 
+Day | 1 | 1 | 1 | 1
 Standard I/O | 
 Variables | 
 String Formatting | 
