@@ -3,8 +3,6 @@
 ## Maze Runner Project
 Implement controls to navigate through a maze
 
-Mazes generated at http://www.delorie.com/game-room/mazes/genmaze.cgi
-
 ### Project Instructions
 In this project, we will build user controls to navigate through a pre-defined maze.  The maze will be in a plain text file consisting of the following characters:
 
@@ -159,7 +157,7 @@ while True:
     print_maze(maze)
 ```
 
-Check 
+Check if the player has reached the exit position.  If so, end the game.
 
 ``` python
     # If the player position are at the exit coordinates, game ends
@@ -168,11 +166,44 @@ Check
         break
 ```
 
+Prompt the user to make a move.
 
+``` python
+    # Prompt user to make a move
+    userInput = raw_input('Please enter a move (w/a/s/d): ')
+```
 
+We need to make sure the player's move is valid.  If so, then change the player's position accordingly.  Note we also refresh the player's position indicator 'O'.
+
+``` python
+    # Erase old player indicator
+    maze[pos_y][pos_x] = ' '
+
+    # User tries to go up
+    if (userInput == 'w' and pos_y != 0 and maze[pos_y - 1][pos_x] != 'X'):
+        pos_y = pos_y - 1
+
+    # User tries to go left
+    elif (userInput == 'a' and pos_x != 0 and maze[pos_y][pos_x - 1] != 'X'):
+        pos_x = pos_x - 1
+        
+    # User tries to go down
+    elif (userInput == 's' and pos_y != len(maze) - 1 and maze[pos_y + 1][pos_x] != 'X'):
+        pos_y = pos_y + 1
+        
+    # User tries to go right
+    elif (userInput == 'd' and pos_x != len(maze[pos_y]) - 1 and maze[pos_y][pos_x + 1] != 'X'):
+        pos_x = pos_x + 1
+    
+    # Invalid input
+    else:
+        print('Invalid move!')
+
+    # Add new player indicator
+    maze[pos_y][pos_x] = 'O'
+```
 
 ### Extending this Project
-- Calculate more stats, ex: which routes are common, peak times, weekdays vs weekends, etc
-- Clean up outliers, ex: longest trip is 47,097 minutes!
-- Incorporate weather data into analysis
-- Download more time periods from [here](https://s3.amazonaws.com/tripdata/index.html)
+- Generate a new maze to play each time the program is run, more mazes can be generated [here](http://www.delorie.com/game-room/mazes/genmaze.cgi)
+- Refresh the screen after each move (ie., os.system('cls').  Reference [here](https://docs.python.org/2/library/os.html#os.system)
+- Create a scoring system, for example, tracking the number of player moves or turns to reach the end of the maze.
