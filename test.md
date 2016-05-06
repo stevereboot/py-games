@@ -3,7 +3,7 @@
 Feel free to contribute projects for any day.  Keep in mind the difficulty level and curriculum items we want to focus on each day.  The goal is to have more than enough projects to choose from each day, and we can discuss them all.  Any projects unused for the workshop can still be provided as extra-credit or as a post-workshop activity.  Also, we can use them for future workshops.
 
 
-| Hello | High-Low | Hot-Cold | Calculator
+| | Hello | High-Low | Hot-Cold | Calculator
 --- | --- | --- | --- | ---
 Project | 
 Day | 
