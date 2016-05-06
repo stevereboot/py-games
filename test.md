@@ -76,8 +76,33 @@ exit_x = -1
 exit_y = -1
 ```
 
-#### Parse Maze text file into 2-D List
-Loop through the maze file, evaluating one line at a time.  Use a counter, `line_ctr`, to track which line is being evaluated.  Create a list that will hold the characters of each line.  When the next line is being evaluated, the list is reset to empty.
+#### Parse Maze File Into 2-D List
+In order to track the player's position and determine if moves are valid, we parse the maze text file into a 2-dimensional list.  You can think of this as a list of rows, which each item in the row corresponding to a columnm in the maze.  
+
+``` bash
+X X X X X X X X X X X X X X X X X X X X X
+O   X           X   X       X           X
+X   X   X X X   X   X   X   X   X X X   X
+X   X   X       X       X       X       X
+...
+```
+
+is stored as:
+
+``` python
+[
+    ['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
+    ['O', ' ', 'X', ' ', ' ', ' ', ' ', ' ', 'X', ' ', 'X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', ' ', ' ', 'X'],
+    ['X', ' ', 'X', ' ', 'X', 'X', 'X', ' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X', ' ', 'X', 'X', 'X', ' ', 'X'],
+    ['X', ' ', 'X', ' ', 'X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X', ' ', ' ', ' ', 'X'],
+    ...
+]
+
+```
+
+The player's current position ("O") is in the "second row, first column".  Assuming our 2-D list is called `maze`, we can access it this way: `player_pos = maze[1][0]`.  Note: lists are zero indexed.
+
+To create the 2_D list, we loop through the maze file, evaluating one line at a time.  Use a counter, `line_ctr`, to track which line is being evaluated.  Create a list that will hold the characters of each line.  When the next line is being evaluated, the list is reset to empty.
 
 ``` python
 # Start with the first line
