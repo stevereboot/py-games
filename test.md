@@ -6,16 +6,16 @@ Feel free to contribute projects for any day.  Keep in mind the difficulty level
 | | Hello | High-Low | Hot-Cold | Calculator
 --- | --- | --- | --- | ---
 Day | 1 | 1 | 1 | 1
-Standard I/O | 
-Variables | 
-String Formatting | 
-Casting | 
-If-Then-Else | 
-Imports | 
-Operator += | 
+Standard I/O | x | x | x | x
+Variables | x | x | x | x
+String Formatting | x |
+If-Then-Else | | x | x | x
+Casting | | | | x
+Imports | | x | x
+Random Module | | x | x
+Operator += | | x | x
 While Loop | 
 Break | 
-Random Module | 
 Opening Files | 
 Csv | 
 For Loop | 
